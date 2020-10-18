@@ -1,5 +1,10 @@
 import 'dart:io';
 
+import 'package:amategeko_yumuhanda/screens/QuestionsAndAnswers.dart';
+import 'package:amategeko_yumuhanda/screens/TrafficLights.dart';
+import 'package:amategeko_yumuhanda/screens/carSigns.dart';
+import 'package:amategeko_yumuhanda/screens/lessons.dart';
+import 'package:amategeko_yumuhanda/screens/quiz.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -73,86 +78,130 @@ class _MyHomeState extends State<MyHome> {
         padding: EdgeInsets.only(top: 5.0),
         child: GridView(
           children: [
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/study.png")),
+            // study now grid
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context){
+                      return Lessons();
+                    }));
+              },
+              child: ListTile(
+                title: Container(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom:12.0),
+                    child: CircleAvatar(
+                        child: Image.asset("images/study.png")),
+                  ),
                 ),
-              ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                child: Text("Tangira wige",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
+                subtitle: Padding(
+                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
+                  child: Text("Tangira wige",style: TextStyle(
+                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                  ),),
+                ),
               ),
             ),
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/traffic_light.jpg")),
+  //traffic light grid          // traffic light grid
+
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return Trafficlight_screen();
+                }));
+              },
+              child: ListTile(
+                title: Container(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom:12.0),
+                    child: CircleAvatar(
+                        child: Image.asset("images/traffic_light.jpg")),
+                  ),
                 ),
-              ),
-              subtitle: Container(
-                child: Text("Amatara Yo mu muhanda",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
+                subtitle: Container(
+                  child: Text("Amatara Yo mu muhanda",style: TextStyle(
+                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                  ),),
+                ),
               ),
             ),
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/carSign.png")),
+       // // car sign grid     // car sign grid           // car sign grid
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return CarSigns();
+                }));
+              },
+              child: ListTile(
+                title: Container(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom:12.0),
+                    child: CircleAvatar(
+                        child: Image.asset("images/carSign.png")),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
+                  child: Text("Ibimenyetso by'imodoka",style: TextStyle(
+                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                  ),),
                 ),
               ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                child: Text("Ibimenyetso by'imodoka",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
+            ),
+// question and answer grid
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return Questions_and_answers();
+                }));
+              },
+              child: ListTile(
+                title: Container(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom:12.0),
+                    child: CircleAvatar(
+                        child: Image.asset("images/questions.jpg")),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
+                  child: Text("Soma Ibibazo",style: TextStyle(
+                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                  ),),
+                ),
               ),
             ),
 
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/questions.jpg")),
+// Quiz grid
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return Quiz_screen();
+                }));
+              },
+              child: ListTile(
+                title: Container(
+                  height: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom:12.0),
+                    child: CircleAvatar(
+                        child: Image.asset("images/quiz_logo.png")),
+                  ),
+                ),
+                subtitle: Padding(
+                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
+                  child: Text("Imenyereze",style: TextStyle(
+                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                  ),),
                 ),
               ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                child: Text("Soma Ibibazo",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
-              ),
             ),
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/quiz_logo.png")),
-                ),
-              ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                child: Text("Imenyereze",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
-              ),
-            ),
+
+
             ListTile(
               title: Container(
                 height: 100,
