@@ -55,10 +55,11 @@ class _MyHomeState extends State<MyHome> {
               Container(
                 height: 50,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    shape: BoxShape.rectangle,
-                    //color: Colors.red,
-                    border: Border.all(color: Colors.white, width: 4.0)),
+                  borderRadius: BorderRadius.circular(12.0),
+                  shape: BoxShape.rectangle,
+                  //color: Colors.red,
+                  border: Border.all(color: Colors.white, width: 4.0),
+                ),
                 child: IconButton(
                   icon: Icon(
                     Icons.star_rate,
