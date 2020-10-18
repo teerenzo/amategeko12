@@ -75,7 +75,7 @@ class _MyHomeState extends State<MyHome> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 5.0),
+        padding: EdgeInsets.all(12.0),
         child: GridView(
           children: [
             // study now grid
@@ -86,20 +86,23 @@ class _MyHomeState extends State<MyHome> {
                       return Lessons();
                     }));
               },
-              child: ListTile(
-                title: Container(
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom:12.0),
-                    child: CircleAvatar(
-                        child: Image.asset("images/study.png")),
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom:12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset("images/study.png",width: 100,),
+                          Text("Tangira wige",style: TextStyle(
+                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                          ),),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                  child: Text("Tangira wige",style: TextStyle(
-                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                  ),),
                 ),
               ),
             ),
@@ -111,19 +114,23 @@ class _MyHomeState extends State<MyHome> {
                   return Trafficlight_screen();
                 }));
               },
-              child: ListTile(
-                title: Container(
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom:12.0),
-                    child: CircleAvatar(
-                        child: Image.asset("images/traffic_light.jpg")),
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom:12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset("images/traffic_light.jpg",width: 80,),
+                          Text("Amatara Yo mu muhanda",style: TextStyle(
+                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                          ),),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                subtitle: Container(
-                  child: Text("Amatara Yo mu muhanda",style: TextStyle(
-                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                  ),),
                 ),
               ),
             ),
@@ -134,20 +141,23 @@ class _MyHomeState extends State<MyHome> {
                   return CarSigns();
                 }));
               },
-              child: ListTile(
-                title: Container(
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom:12.0),
-                    child: CircleAvatar(
-                        child: Image.asset("images/carSign.png")),
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom:0.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset("images/carSign.png",width: 80,),
+                          Text("Ibimenyetso by' imodoka",style: TextStyle(
+                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                          ),),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                  child: Text("Ibimenyetso by'imodoka",style: TextStyle(
-                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                  ),),
                 ),
               ),
             ),
@@ -158,20 +168,20 @@ class _MyHomeState extends State<MyHome> {
                   return Questions_and_answers();
                 }));
               },
-              child: ListTile(
-                title: Container(
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom:12.0),
-                    child: CircleAvatar(
-                        child: Image.asset("images/questions.jpg")),
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset("images/questions.jpg",width: 100,),
+                        Text("Soma Ibibazo",style: TextStyle(
+                            fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                        ),),
+                      ],
+                    ),
                   ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                  child: Text("Soma Ibibazo",style: TextStyle(
-                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                  ),),
                 ),
               ),
             ),
@@ -183,39 +193,42 @@ class _MyHomeState extends State<MyHome> {
                   return Quiz_screen();
                 }));
               },
-              child: ListTile(
-                title: Container(
-                  height: 100,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom:12.0),
-                    child: CircleAvatar(
-                        child: Image.asset("images/quiz_logo.png")),
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset("images/quiz_logo.png", width: 80,),
+                        Text("Imenyereze",style: TextStyle(
+                            fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                        ),),
+                      ],
+                    ),
                   ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                  child: Text("Imenyereze",style: TextStyle(
-                      fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                  ),),
                 ),
               ),
             ),
 
 
-            ListTile(
-              title: Container(
-                height: 100,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom:12.0),
-                  child: CircleAvatar(
-                      child: Image.asset("images/share.png")),
+            Card(
+              child: ListTile(
+                title: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset("images/share.png",
+                        width: 80,
+
+                      ),
+                      Text("Sangiza Abandi",style: TextStyle(
+                          fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                      ))
+                    ],
+                  ),
                 ),
-              ),
-              subtitle: Padding(
-                padding: const EdgeInsets.only(bottom:22.0,left: 9.0),
-                child: Text("Sangiza Abandi",style: TextStyle(
-                    fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
-                ),),
               ),
             ),
 
