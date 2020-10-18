@@ -26,8 +26,8 @@ class _MyHomeState extends State<MyHome> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(
-          "Kora Rimwe",
-          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+          "Kora Rimwe Utsinde",
+          style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -118,7 +118,7 @@ class _MyHomeState extends State<MyHome> {
                             "Tangira wige",
                             style: TextStyle(
                                 fontSize: 16.0,
-                                color: Colors.pink,
+                                color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
                         ],
@@ -154,7 +154,7 @@ class _MyHomeState extends State<MyHome> {
                             "Amatara Yo mu muhanda",
                             style: TextStyle(
                                 fontSize: 16.0,
-                                color: Colors.pink,
+                                color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
                         ],
@@ -189,7 +189,7 @@ class _MyHomeState extends State<MyHome> {
                             "Ibimenyetso by' imodoka",
                             style: TextStyle(
                                 fontSize: 16.0,
-                                color: Colors.pink,
+                                color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
                         ],
@@ -222,7 +222,7 @@ class _MyHomeState extends State<MyHome> {
                           "Soma Ibibazo",
                           style: TextStyle(
                               fontSize: 16.0,
-                              color: Colors.pink,
+                              color: Colors.blue,
                               fontWeight: FontWeight.w700),
                         ),
                       ],
@@ -255,7 +255,7 @@ class _MyHomeState extends State<MyHome> {
                           "Imenyereze",
                           style: TextStyle(
                               fontSize: 16.0,
-                              color: Colors.pink,
+                              color: Colors.blue,
                               fontWeight: FontWeight.w700),
                         ),
                       ],
@@ -279,7 +279,7 @@ class _MyHomeState extends State<MyHome> {
                       Text("Sangiza Abandi",
                           style: TextStyle(
                               fontSize: 16.0,
-                              color: Colors.pink,
+                              color: Colors.blue,
                               fontWeight: FontWeight.w700))
                     ],
                   ),
