@@ -26,9 +26,9 @@ class _MyHomeState extends State<MyHome> {
       appBar: AppBar(
           elevation: 0.0,
           title: Text(
-            "Kora Rimwe",
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-          ),
+          "Kora Rimwe Utsinde",
+          style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
+        ),
         actions: [
           IconButton(icon: Icon(Icons.more_vert,color: Colors.white,), onPressed: null),
           IconButton(icon: Icon(Icons.share,color: Colors.white,), onPressed: null)
@@ -97,7 +97,9 @@ class _MyHomeState extends State<MyHome> {
                         children: [
                           Image.asset("images/study.png",width: 100,),
                           Text("Tangira wige",style: TextStyle(
-                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                              fontSize: 16.0,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w700
                           ),),
                         ],
                       ),
@@ -125,7 +127,9 @@ class _MyHomeState extends State<MyHome> {
                         children: [
                           Image.asset("images/traffic_light.jpg",width: 80,),
                           Text("Amatara Yo mu muhanda",style: TextStyle(
-                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                              fontSize: 16.0,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w700
                           ),),
                         ],
                       ),
@@ -152,7 +156,9 @@ class _MyHomeState extends State<MyHome> {
                         children: [
                           Image.asset("images/carSign.png",width: 80,),
                           Text("Ibimenyetso by' imodoka",style: TextStyle(
-                              fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                              fontSize: 16.0,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w700
                           ),),
                         ],
                       ),
@@ -177,7 +183,9 @@ class _MyHomeState extends State<MyHome> {
                       children: [
                         Image.asset("images/questions.jpg",width: 100,),
                         Text("Soma Ibibazo",style: TextStyle(
-                            fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                            fontSize: 16.0,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w700
                         ),),
                       ],
                     ),
@@ -202,7 +210,9 @@ class _MyHomeState extends State<MyHome> {
                       children: [
                         Image.asset("images/quiz_logo.png", width: 80,),
                         Text("Imenyereze",style: TextStyle(
-                            fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                            fontSize: 16.0,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w700
                         ),),
                       ],
                     ),
@@ -224,7 +234,9 @@ class _MyHomeState extends State<MyHome> {
 
                       ),
                       Text("Sangiza Abandi",style: TextStyle(
-                          fontSize: 16.0,color: Colors.pink,fontWeight: FontWeight.w700
+                          fontSize: 16.0,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.w700
                       ))
                     ],
                   ),
