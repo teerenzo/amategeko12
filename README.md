@@ -1,6 +1,6 @@
 # amategeko_yumuhanda
 
-A new Flutter application.
+project by t&t it group.
 
 ## Getting Started
 
