@@ -74,14 +74,31 @@ class Questions_and_answers extends StatelessWidget {
   Widget build(BuildContext context) {
     QuizScreen quizScreen = QuizScreen();
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Questions_and_answers"),
-      ),
-      body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return Container();
-        },
-      ),
-    );
+        appBar: AppBar(
+          title: Text("Questions_and_answers"),
+        ),
+        body: ListView.builder(
+            itemCount: _questions.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                contentPadding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+                title: Text(_questions[index]['text']),
+                subtitle: Container(
+                  // alignment: Alignment.topLeft,
+                  child: Column(
+                    children: [
+                      ...(_questions[index]['answers']
+                              as List<Map<String, Object>>)
+                          .map((answer) {
+                        return Text(
+                          answer['text'],
+                          textAlign: TextAlign.right,
+                        );
+                      }).toList(),
+                    ],
+                  ),
+                ),
+              );
+            }));
   }
 }
