@@ -105,6 +105,8 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _answerQuestion(String apl, String right) {
+    _timer.cancel();
+
     if (apl == right) {
       _totalScore += 1;
       showDialog(
@@ -154,6 +156,8 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _questionIndex++;
     });
+    start = 30;
+    initState();
     // _totalScore += score;
   }
 
