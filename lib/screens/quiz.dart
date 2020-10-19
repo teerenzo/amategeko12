@@ -91,7 +91,6 @@ class _QuizScreenState extends State<QuizScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            // title: Text('Size'),
             content: Text('Correct'),
             actions: [
               MaterialButton(
@@ -114,7 +113,6 @@ class _QuizScreenState extends State<QuizScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            // title: Text('Size'),
             content: Text("Worng, right answer was: $right"),
             actions: [
               MaterialButton(
