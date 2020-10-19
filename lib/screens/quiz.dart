@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:amategeko_yumuhanda/components/quiz.dart';
 import 'package:amategeko_yumuhanda/components/result.dart';
@@ -22,7 +24,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
+      'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
       'right': 'C',
       'answers': [
         {'apl': 'A', 'text': 'a) Iburyo'},
@@ -33,7 +35,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
+      'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Igikomatanye'},
@@ -44,7 +46,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
+      'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Umuyobozi'},
@@ -65,7 +67,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
+      'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Burenga ibiro 750'},
@@ -77,11 +79,29 @@ class _QuizScreenState extends State<QuizScreen> {
   ];
   var _questionIndex = 0;
   var _totalScore = 0;
+  Timer _timer;
+  int start = 30;
+
   void resetQuiz() {
     setState(() {
       _questionIndex = 0;
       _totalScore = 0;
     });
+  }
+
+  @override
+  void initState() {
+    const oneSecond = Duration(seconds: 1);
+    _timer = Timer.periodic(oneSecond, (timer) {
+      setState(() {
+        if (start > 0) {
+          start--;
+        } else {
+          _timer.cancel();
+        }
+      });
+    });
+    super.initState();
   }
 
   void _answerQuestion(String apl, String right) {
@@ -144,7 +164,7 @@ class _QuizScreenState extends State<QuizScreen> {
         title: Text("Quiz"),
       ),
       body: _questionIndex < _questions.length
-          ? Quiz(_questions, _questionIndex, _answerQuestion)
+          ? Quiz(_questions, _questionIndex, _answerQuestion, start)
           : Result(_totalScore, resetQuiz, _questions.length),
     );
   }
