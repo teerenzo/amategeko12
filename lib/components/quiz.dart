@@ -1,13 +1,40 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:amategeko_yumuhanda/components/questions.dart';
 import 'package:amategeko_yumuhanda/components/answer.dart';
 
-class Quiz extends StatelessWidget {
+class Quiz extends StatefulWidget {
   final List<Map<String, Object>> questions;
   final int questionIndex;
   final Function answerQuestion;
 
   Quiz(this.questions, this.questionIndex, this.answerQuestion);
+
+  @override
+  _QuizState createState() => _QuizState();
+}
+
+class _QuizState extends State<Quiz> {
+  Timer _timer;
+
+  int start = 30;
+
+  @override
+  void initState() {
+    const oneSecond = Duration(seconds: 1);
+    _timer = Timer.periodic(oneSecond, (timer) {
+      setState(() {
+        if (start > 0) {
+          start--;
+        } else {
+          _timer.cancel();
+        }
+      });
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -19,14 +46,14 @@ class Quiz extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "Ibibazo: ${questionIndex + 1}/${questions.length}",
+                "Ibibazo: ${widget.questionIndex + 1}/${widget.questions.length}",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 17.0,
                 ),
               ),
               Text(
-                "30",
+                start.toString(),
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 30.0,
@@ -35,19 +62,19 @@ class Quiz extends StatelessWidget {
             ],
           ),
         ),
-        Questions(questions[questionIndex]['text']),
+        Questions(widget.questions[widget.questionIndex]['text']),
         Padding(padding: const EdgeInsets.only(top: 150.0)),
         Card(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),
             child: Column(
               children: [
-                ...(questions[questionIndex]['answers']
+                ...(widget.questions[widget.questionIndex]['answers']
                         as List<Map<String, Object>>)
                     .map((answer) {
                   return Answer(
-                      () => answerQuestion(
-                          answer['apl'], questions[questionIndex]['right']),
+                      () => widget.answerQuestion(answer['apl'],
+                          widget.questions[widget.questionIndex]['right']),
                       answer['text']);
                 }).toList()
               ],
