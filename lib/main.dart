@@ -238,7 +238,7 @@ class _MyHomeState extends State<MyHome> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
-                  return Quiz_screen();
+                  return QuizScreen();
                 }));
               },
               child: Card(
