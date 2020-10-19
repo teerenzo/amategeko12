@@ -10,33 +10,65 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   final _questions = const [
     {
-      'text': 'Umuntu yemerewe kwambuka ryari?',
+      'text': 'Ijambo akagarurarumuril,'
+          ' bivuga akantu karabagirana gasubiza imirasire y’urumuri :?',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'hariomo ibara ryu mutuku'},
-        {'apl': 'B', 'text': 'harimo ibara ry\'icyatsi'},
-        {'apl': 'C', 'text': 'harimo ibara ry\'umukara'},
+        {'apl': 'A', 'text': 'Ku kintu kirabagirana'},
+        {'apl': 'B', 'text': 'Ku kintu kiyohereje'},
+        {'apl': 'C', 'text': 'Ku mpande z’inzira nyabagendwa'},
         {'apl': 'D', 'text': 'nta gisubizo kirimo'}
       ]
     },
     {
-      'text': 'what\'s your favorite color',
-      'right': 'B',
+      'text':
+          'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
+      'right': 'C',
       'answers': [
-        {'apl': 'A', 'text': 'Red'},
-        {'apl': 'B', 'text': 'Green'},
-        {'apl': 'C', 'text': 'black'},
-        {'apl': 'D', 'text': 'White'}
+        {'apl': 'A', 'text': 'a)	Iburyo'},
+        {'apl': 'B', 'text': 'b)	Ibumoso'},
+        {'apl': 'C', 'text': 'c)	Iburyo cg ibumoso'},
+        {'apl': 'D', 'text': 'd)	Ku ruhande uru nuru'}
       ]
     },
     {
-      'text': 'what\'s your favorite color',
+      'text': 'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'Red'},
-        {'apl': 'B', 'text': 'Green'},
-        {'apl': 'C', 'text': 'black'},
-        {'apl': 'D', 'text': 'White'}
+        {'apl': 'A', 'text': 'a)	Igikomatanye'},
+        {'apl': 'B', 'text': 'b)	Makuzungu'},
+        {'apl': 'C', 'text': 'c)	Remoruke'},
+        {'apl': 'D', 'text': 'd)	Igikururana kabiri'}
+      ]
+    },
+    {
+      'text': 'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
+      'right': 'B',
+      'answers': [
+        {'apl': 'A', 'text': 'a)	Umuyobozi'},
+        {'apl': 'B', 'text': 'b)	Nta  moteri'},
+        {'apl': 'C', 'text': 'c)	N\'ibikigize'},
+        {'apl': 'D', 'text': 'd)	Nta gisubizo cy’ukuri  kirimo'}
+      ]
+    },
+    {
+      'text': 'Ijambo inzira y’ibinyabiziga bivuga: ',
+      'right': 'D',
+      'answers': [
+        {'apl': 'A', 'text': 'a)	Inzira zikikije umuhanda'},
+        {'apl': 'B', 'text': 'b)	Umuhanda'},
+        {'apl': 'C', 'text': 'c)	Inzira nyabagendwa'},
+        {'apl': 'D', 'text': 'd)	Umuhanda n’inzira ziwukikije'}
+      ]
+    },
+    {
+      'text': 'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
+      'right': 'B',
+      'answers': [
+        {'apl': 'A', 'text': 'a)	Burenga ibiro 750'},
+        {'apl': 'B', 'text': 'b)	Butarenga ibiro 750'},
+        {'apl': 'C', 'text': 'c)	Bungana n’ibiro 750'},
+        {'apl': 'D', 'text': 'd)	Nta gisubizo cy’ukuri  kirimo'}
       ]
     },
   ];
