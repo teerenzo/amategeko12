@@ -8,33 +8,15 @@ class Quiz extends StatefulWidget {
   final List<Map<String, Object>> questions;
   final int questionIndex;
   final Function answerQuestion;
+  int counter;
 
-  Quiz(this.questions, this.questionIndex, this.answerQuestion);
+  Quiz(this.questions, this.questionIndex, this.answerQuestion, this.counter);
 
   @override
   _QuizState createState() => _QuizState();
 }
 
 class _QuizState extends State<Quiz> {
-  Timer _timer;
-
-  int start = 30;
-
-  @override
-  void initState() {
-    const oneSecond = Duration(seconds: 1);
-    _timer = Timer.periodic(oneSecond, (timer) {
-      setState(() {
-        if (start > 0) {
-          start--;
-        } else {
-          _timer.cancel();
-        }
-      });
-    });
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -53,9 +35,9 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               Text(
-                start.toString(),
+                widget.counter.toString(),
                 style: TextStyle(
-                    color: Colors.black,
+                    color: widget.counter > 10 ? Colors.black : Colors.red,
                     fontSize: 30.0,
                     fontWeight: FontWeight.w700),
               )
