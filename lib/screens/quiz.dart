@@ -14,10 +14,10 @@ class _QuizScreenState extends State<QuizScreen> {
           ' bivuga akantu karabagirana gasubiza imirasire y’urumuri :?',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'Ku kintu kirabagirana'},
-        {'apl': 'B', 'text': 'Ku kintu kiyohereje'},
-        {'apl': 'C', 'text': 'Ku mpande z’inzira nyabagendwa'},
-        {'apl': 'D', 'text': 'nta gisubizo kirimo'}
+        {'apl': 'A', 'text': 'a) Ku kintu kirabagirana'},
+        {'apl': 'B', 'text': 'b) Ku kintu kiyohereje'},
+        {'apl': 'C', 'text': 'c) Ku mpande z’inzira nyabagendwa'},
+        {'apl': 'D', 'text': 'd) nta gisubizo kirimo'}
       ]
     },
     {
@@ -25,50 +25,53 @@ class _QuizScreenState extends State<QuizScreen> {
           'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
       'right': 'C',
       'answers': [
-        {'apl': 'A', 'text': 'a)	Iburyo'},
-        {'apl': 'B', 'text': 'b)	Ibumoso'},
-        {'apl': 'C', 'text': 'c)	Iburyo cg ibumoso'},
-        {'apl': 'D', 'text': 'd)	Ku ruhande uru nuru'}
+        {'apl': 'A', 'text': 'a) Iburyo'},
+        {'apl': 'B', 'text': 'b) Ibumoso'},
+        {'apl': 'C', 'text': 'c) Iburyo cg ibumoso'},
+        {'apl': 'D', 'text': 'd) Ku ruhande uru nuru'}
       ]
     },
     {
-      'text': 'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
+      'text':
+          'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'a)	Igikomatanye'},
-        {'apl': 'B', 'text': 'b)	Makuzungu'},
-        {'apl': 'C', 'text': 'c)	Remoruke'},
-        {'apl': 'D', 'text': 'd)	Igikururana kabiri'}
+        {'apl': 'A', 'text': 'a) Igikomatanye'},
+        {'apl': 'B', 'text': 'b) Makuzungu'},
+        {'apl': 'C', 'text': 'c) Remoruke'},
+        {'apl': 'D', 'text': 'd) Igikururana kabiri'}
       ]
     },
     {
-      'text': 'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
+      'text':
+          'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'a)	Umuyobozi'},
-        {'apl': 'B', 'text': 'b)	Nta  moteri'},
-        {'apl': 'C', 'text': 'c)	N\'ibikigize'},
-        {'apl': 'D', 'text': 'd)	Nta gisubizo cy’ukuri  kirimo'}
+        {'apl': 'A', 'text': 'a) Umuyobozi'},
+        {'apl': 'B', 'text': 'b) Nta  moteri'},
+        {'apl': 'C', 'text': 'c) N\'ibikigize'},
+        {'apl': 'D', 'text': 'd) Nta gisubizo cy’ukuri  kirimo'}
       ]
     },
     {
       'text': 'Ijambo inzira y’ibinyabiziga bivuga: ',
       'right': 'D',
       'answers': [
-        {'apl': 'A', 'text': 'a)	Inzira zikikije umuhanda'},
-        {'apl': 'B', 'text': 'b)	Umuhanda'},
-        {'apl': 'C', 'text': 'c)	Inzira nyabagendwa'},
-        {'apl': 'D', 'text': 'd)	Umuhanda n’inzira ziwukikije'}
+        {'apl': 'A', 'text': 'a) Inzira zikikije umuhanda'},
+        {'apl': 'B', 'text': 'b) Umuhanda'},
+        {'apl': 'C', 'text': 'c) Inzira nyabagendwa'},
+        {'apl': 'D', 'text': 'd) Umuhanda n’inzira ziwukikije'}
       ]
     },
     {
-      'text': 'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
+      'text':
+          'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
       'right': 'B',
       'answers': [
-        {'apl': 'A', 'text': 'a)	Burenga ibiro 750'},
-        {'apl': 'B', 'text': 'b)	Butarenga ibiro 750'},
-        {'apl': 'C', 'text': 'c)	Bungana n’ibiro 750'},
-        {'apl': 'D', 'text': 'd)	Nta gisubizo cy’ukuri  kirimo'}
+        {'apl': 'A', 'text': 'a) Burenga ibiro 750'},
+        {'apl': 'B', 'text': 'b) Butarenga ibiro 750'},
+        {'apl': 'C', 'text': 'c) Bungana n’ibiro 750'},
+        {'apl': 'D', 'text': 'd) Nta gisubizo cy’ukuri  kirimo'}
       ]
     },
   ];
@@ -112,7 +115,7 @@ class _QuizScreenState extends State<QuizScreen> {
         builder: (context) {
           return AlertDialog(
             // title: Text('Size'),
-            content: Text("Worng, right answer was $right"),
+            content: Text("Worng, right answer was: $right"),
             actions: [
               MaterialButton(
                 onPressed: () {
@@ -144,7 +147,7 @@ class _QuizScreenState extends State<QuizScreen> {
       ),
       body: _questionIndex < _questions.length
           ? Quiz(_questions, _questionIndex, _answerQuestion)
-          : Result(_totalScore, resetQuiz),
+          : Result(_totalScore, resetQuiz, _questions.length),
     );
   }
 }

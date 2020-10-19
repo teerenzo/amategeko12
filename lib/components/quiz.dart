@@ -19,7 +19,7 @@ class Quiz extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "Ibibazo: 3/10",
+                "Ibibazo: ${questionIndex + 1}/${questions.length}",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 17.0,
@@ -36,7 +36,7 @@ class Quiz extends StatelessWidget {
           ),
         ),
         Questions(questions[questionIndex]['text']),
-        Padding(padding: const EdgeInsets.only(top: 260.0)),
+        Padding(padding: const EdgeInsets.only(top: 150.0)),
         Card(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),
@@ -48,15 +48,13 @@ class Quiz extends StatelessWidget {
                   return Answer(
                       () => answerQuestion(
                           answer['apl'], questions[questionIndex]['right']),
-                      answer['text'],
-                      answer['apl']);
+                      answer['text']);
                 }).toList()
               ],
             ),
           ),
         ),
       ],
-
     );
   }
 }

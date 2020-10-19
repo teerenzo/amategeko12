@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class Answer extends StatelessWidget {
   final Function selcetedHandler;
   final String text;
-  final String apl;
 
-  Answer(this.selcetedHandler, this.text, this.apl);
+  Answer(
+    this.selcetedHandler,
+    this.text,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,6 @@ class Answer extends StatelessWidget {
           RaisedButton(
             color: Colors.blue,
             child: ListTile(
-              leading: Text(apl),
               title: Text(
                 text,
                 style: TextStyle(color: Colors.white, fontSize: 20),

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final int totalScore;
+  final int questionsLength;
   final Function resetQuiz;
-  Result(this.totalScore, this.resetQuiz);
+  Result(this.totalScore, this.resetQuiz, this.questionsLength);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class Result extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              'Your Score: $totalScore',
+              'Your Score: $totalScore/$questionsLength',
               style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
