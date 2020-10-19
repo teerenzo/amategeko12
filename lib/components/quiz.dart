@@ -13,14 +13,25 @@ class Quiz extends StatelessWidget {
     return Column(
       children: [
         Questions(questions[questionIndex]['text']),
-        ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
-            .map((answer) {
-          return Answer(
-              () => answerQuestion(
-                  answer['apl'], questions[questionIndex]['right']),
-              answer['text'],
-              answer['apl']);
-        }).toList()
+        Padding(padding: const EdgeInsets.only(top: 260.0)),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),
+            child: Column(
+              children: [
+                ...(questions[questionIndex]['answers']
+                        as List<Map<String, Object>>)
+                    .map((answer) {
+                  return Answer(
+                      () => answerQuestion(
+                          answer['apl'], questions[questionIndex]['right']),
+                      answer['text'],
+                      answer['apl']);
+                }).toList()
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -10,8 +10,8 @@ class Questions extends StatelessWidget {
       margin: EdgeInsets.all(20),
       child: Text(
         questions,
-        style: TextStyle(fontSize: 28),
-        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 20),
+        // textAlign: TextAlign.center,
       ),
     );
   }
