@@ -75,28 +75,43 @@ class Questions_and_answers extends StatelessWidget {
         appBar: AppBar(
           title: Text("Questions_and_answers"),
         ),
-        body: ListView.builder(
-            itemCount: _questions.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                contentPadding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
-                title: Text(_questions[index]['text']),
-                subtitle: Container(
-                  // alignment: Alignment.topLeft,
-                  child: Column(
-                    children: [
-                      ...(_questions[index]['answers']
-                              as List<Map<String, Object>>)
-                          .map((answer) {
-                        return Text(
-                          answer['text'],
-                          textAlign: TextAlign.right,
-                        );
-                      }).toList(),
-                    ],
+        body: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: ListView.builder(
+              itemCount: _questions.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  contentPadding:
+                      const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+                  title: Text(
+                    _questions[index]['text'],
+                    style:
+                        TextStyle(fontWeight: FontWeight.w700, fontSize: 22.0),
                   ),
-                ),
-              );
-            }));
+                  subtitle: Container(
+                    // alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        ...(_questions[index]['answers']
+                                as List<Map<String, Object>>)
+                            .map((answer) {
+                          return Text(
+                            answer['text'],
+                            style: TextStyle(fontSize: 17),
+                          );
+                        }).toList(),
+                        Divider(
+                          color: Colors.blue,
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              }),
+        ));
   }
 }
