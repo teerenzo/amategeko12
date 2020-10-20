@@ -80,16 +80,8 @@ class _QuizScreenState extends State<QuizScreen> {
   var _questionIndex = 0;
   var _totalScore = 0;
   Timer _timer;
-  int start = 5;
+  int start = 60;
   static const oneSecond = Duration(seconds: 1);
-
-  void resetQuiz() {
-    setState(() {
-      _questionIndex = 0;
-      _totalScore = 0;
-      start = 5;
-    });
-  }
 
   @override
   void initState() {
@@ -107,6 +99,14 @@ class _QuizScreenState extends State<QuizScreen> {
     super.initState();
   }
 
+  void resetQuiz() {
+    setState(() {
+      _questionIndex = 0;
+      _totalScore = 0;
+      start = 60;
+    });
+  }
+
   void _answerQuestion(String apl, String right) {
     _timer.cancel();
     if (apl == right) {
@@ -121,7 +121,7 @@ class _QuizScreenState extends State<QuizScreen> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    start = 5;
+                    start = 60;
                     _timer = Timer.periodic(oneSecond, (timer) {
                       setState(() {
                         if (start > 0) {
@@ -159,7 +159,7 @@ class _QuizScreenState extends State<QuizScreen> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    start = 5;
+                    start = 60;
                     _timer = Timer.periodic(oneSecond, (timer) {
                       setState(() {
                         if (start > 0) {
@@ -197,7 +197,7 @@ class _QuizScreenState extends State<QuizScreen> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    start = 5;
+                    start = 60;
                     _timer = Timer.periodic(oneSecond, (timer) {
                       setState(() {
                         if (start > 0) {
