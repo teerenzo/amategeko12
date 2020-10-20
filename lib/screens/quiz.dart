@@ -99,6 +99,15 @@ class _QuizScreenState extends State<QuizScreen> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    setState(() {
+      _timer.cancel();
+    });
+
+    super.dispose();
+  }
+
   void resetQuiz() {
     setState(() {
       _questionIndex = 0;
