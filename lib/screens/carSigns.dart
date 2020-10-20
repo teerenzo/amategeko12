@@ -127,6 +127,10 @@ class _CarSignsState extends State<CarSigns> {
                     child: Text(
                       signs[index]['name'],
                       textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 21.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

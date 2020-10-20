@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Image.asset(
                   "images/stop.jpg",
-                  width: size.width / 2,
+                  width: size.width / 6,
                 ),
                 SizedBox(
                   height: size.height / 20,
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Text(
                   "KORA RIMWE GUSA!!",
                   style: TextStyle(
-                      fontSize: size.width / 12,
+                      fontSize: size.width / 19,
                       color: Colors.yellow,
                       fontWeight: FontWeight.w700),
                 )
