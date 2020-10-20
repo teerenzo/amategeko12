@@ -85,6 +85,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void resetQuiz() {
     setState(() {
+      start = 5;
       _questionIndex = 0;
       _totalScore = 0;
     });
@@ -111,7 +112,6 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _answerQuestion(String apl, String right) {
     _timer.cancel();
-
     if (apl == right) {
       _totalScore += 1;
       showDialog(
@@ -129,7 +129,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          _answerQuestion("b", "b");
+                          _answerQuestion("2", "4");
                           _timer.cancel();
                         }
                       });
@@ -164,7 +164,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          _answerQuestion("b", "b");
+                          _answerQuestion("2", "3");
                           _timer.cancel();
                         }
                       });
@@ -199,8 +199,8 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          _answerQuestion("b", "b");
                           _timer.cancel();
+                          _answerQuestion("2", "4");
                         }
                       });
                     });
