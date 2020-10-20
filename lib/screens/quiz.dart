@@ -24,7 +24,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-      'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
+          'Ijambo itara ndangakerekezo cyangwa ikinyoteri bivuga itara ry’ikinyabiziga rigenewe kwereka abandi bagenzi ko umuyobozi ashaka kugana:',
       'right': 'C',
       'answers': [
         {'apl': 'A', 'text': 'a) Iburyo'},
@@ -35,7 +35,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-      'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
+          'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Igikomatanye'},
@@ -46,7 +46,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-      'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
+          'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Umuyobozi'},
@@ -67,7 +67,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-      'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
+          'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Burenga ibiro 750'},
@@ -88,6 +88,9 @@ class _QuizScreenState extends State<QuizScreen> {
       _totalScore = 0;
     });
   }
+// var timer = Timer(Duration(seconds: 1), () {});
+
+// timer.cancel();
 
   @override
   void initState() {
