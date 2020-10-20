@@ -73,7 +73,7 @@ class Questions_and_answers extends StatelessWidget {
     // QuizScreen quizScreen = QuizScreen();
     return Scaffold(
         appBar: AppBar(
-          title: Text("Questions_and_answers"),
+          title: Text("Questions and answers"),
         ),
         body: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -82,11 +82,11 @@ class Questions_and_answers extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   contentPadding:
-                      const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+                      const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 10.0),
                   title: Text(
-                    _questions[index]['text'],
+                    "${index + 1}) ${_questions[index]['text']}",
                     style:
-                        TextStyle(fontWeight: FontWeight.w700, fontSize: 22.0),
+                        TextStyle(fontWeight: FontWeight.w700, fontSize: 19.0),
                   ),
                   subtitle: Container(
                     // alignment: Alignment.topLeft,
@@ -94,15 +94,24 @@ class Questions_and_answers extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 10,
+                          height: 8,
                         ),
                         ...(_questions[index]['answers']
                                 as List<Map<String, Object>>)
                             .map((answer) {
-                          return Text(
-                            answer['text'],
-                            style: TextStyle(fontSize: 17),
-                          );
+                          return (answer['apl'] == _questions[index]['right']
+                              ? Text(
+                                  answer['text'],
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              : Text(
+                                  answer['text'],
+                                  style: TextStyle(
+                                      fontSize: 17, color: Colors.black),
+                                ));
                         }).toList(),
                         Divider(
                           color: Colors.blue,
