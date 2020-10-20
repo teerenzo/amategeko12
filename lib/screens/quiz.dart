@@ -80,7 +80,7 @@ class _QuizScreenState extends State<QuizScreen> {
   var _questionIndex = 0;
   var _totalScore = 0;
   Timer _timer;
-  int start = 30;
+  int start = 5;
   static const oneSecond = Duration(seconds: 1);
 
   void resetQuiz() {
@@ -109,6 +109,7 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _answerQuestion(String apl, String right) {
+    _answerQuestion("2", "4");
     _timer.cancel();
 
     if (apl == right) {
@@ -122,12 +123,48 @@ class _QuizScreenState extends State<QuizScreen> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    start = 30;
+                    start = 5;
                     _timer = Timer.periodic(oneSecond, (timer) {
                       setState(() {
                         if (start > 0) {
                           start--;
                         } else {
+                          _answerQuestion("b", "b");
+                          _timer.cancel();
+                        }
+                      });
+                    });
+                  });
+                  Navigator.of(context).pop(context);
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    } else if (apl == 2 && right == 4) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text('Correct'),
+            actions: [
+              MaterialButton(
+                onPressed: () {
+                  setState(() {
+                    start = 5;
+                    _timer = Timer.periodic(oneSecond, (timer) {
+                      setState(() {
+                        if (start > 0) {
+                          start--;
+                        } else {
+                          _answerQuestion("b", "b");
                           _timer.cancel();
                         }
                       });
@@ -156,12 +193,13 @@ class _QuizScreenState extends State<QuizScreen> {
               MaterialButton(
                 onPressed: () {
                   setState(() {
-                    start = 30;
+                    start = 5;
                     _timer = Timer.periodic(oneSecond, (timer) {
                       setState(() {
                         if (start > 0) {
                           start--;
                         } else {
+                          _answerQuestion("b", "b");
                           _timer.cancel();
                         }
                       });
