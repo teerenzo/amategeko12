@@ -1,6 +1,4 @@
-import 'package:amategeko_yumuhanda/components/quiz.dart';
 import 'package:flutter/material.dart';
-import 'package:amategeko_yumuhanda/screens/quiz.dart';
 
 class Questions_and_answers extends StatelessWidget {
   final _questions = const [
@@ -72,7 +70,7 @@ class Questions_and_answers extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    QuizScreen quizScreen = QuizScreen();
+    // QuizScreen quizScreen = QuizScreen();
     return Scaffold(
         appBar: AppBar(
           title: Text("Questions_and_answers"),
