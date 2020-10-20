@@ -35,7 +35,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
+      'Ijambo ikinyabiziga gifatanije bivuga ikinyabiziga gikomatanyije kimwe ari ikinyabiziga gikurura ikindi ari :',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Igikomatanye'},
@@ -46,7 +46,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
+      'Ijambo ikinyabiziga kigendeshwa na moteri » bivuga ikinyabiziga cyose gifite moteri kigendesha kandi kigendeshwa ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Umuyobozi'},
@@ -67,7 +67,7 @@ class _QuizScreenState extends State<QuizScreen> {
     },
     {
       'text':
-          'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
+      'Ijambo « remoroki ntoya » bivuga remoroki iyo ariyo yose ifite uburemere : ',
       'right': 'B',
       'answers': [
         {'apl': 'A', 'text': 'a) Burenga ibiro 750'},
@@ -85,14 +85,11 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void resetQuiz() {
     setState(() {
+      start = 5;
       _questionIndex = 0;
       _totalScore = 0;
-      start = 5;
     });
   }
-// var timer = Timer(Duration(seconds: 1), () {});
-
-// timer.cancel();
 
   @override
   void initState() {
@@ -129,9 +126,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          if (_questions.length > _questionIndex) {
-                            _answerQuestion("2", "4");
-                          }
+                          _answerQuestion("2", "4");
                           _timer.cancel();
                         }
                       });
@@ -150,12 +145,12 @@ class _QuizScreenState extends State<QuizScreen> {
           );
         },
       );
-    } else if (apl == "2" && right == "4") {
+    } else if (apl == 2 && right == 4) {
       showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            content: Text('Time out'),
+            content: Text('Correct'),
             actions: [
               MaterialButton(
                 onPressed: () {
@@ -166,9 +161,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          if (_questions.length > _questionIndex) {
-                            _answerQuestion("2", "4");
-                          }
+                          _answerQuestion("2", "3");
                           _timer.cancel();
                         }
                       });
@@ -204,9 +197,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           start--;
                         } else {
                           _timer.cancel();
-                          if (_questions.length > _questionIndex) {
-                            _answerQuestion("2", "4");
-                          }
+                          _answerQuestion("2", "4");
                         }
                       });
                     });
