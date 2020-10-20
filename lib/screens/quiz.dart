@@ -81,6 +81,7 @@ class _QuizScreenState extends State<QuizScreen> {
   var _totalScore = 0;
   Timer _timer;
   int start = 30;
+  static const oneSecond = Duration(seconds: 1);
 
   void resetQuiz() {
     setState(() {
@@ -91,7 +92,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   @override
   void initState() {
-    const oneSecond = Duration(seconds: 1);
+    //const oneSecond = Duration(seconds: 1);
     _timer = Timer.periodic(oneSecond, (timer) {
       setState(() {
         if (start > 0) {
@@ -117,6 +118,18 @@ class _QuizScreenState extends State<QuizScreen> {
             actions: [
               MaterialButton(
                 onPressed: () {
+                  setState(() {
+                    start = 30;
+                    _timer = Timer.periodic(oneSecond, (timer) {
+                      setState(() {
+                        if (start > 0) {
+                          start--;
+                        } else {
+                          _timer.cancel();
+                        }
+                      });
+                    });
+                  });
                   Navigator.of(context).pop(context);
                 },
                 child: Text(
@@ -139,6 +152,18 @@ class _QuizScreenState extends State<QuizScreen> {
             actions: [
               MaterialButton(
                 onPressed: () {
+                  setState(() {
+                    start = 30;
+                    _timer = Timer.periodic(oneSecond, (timer) {
+                      setState(() {
+                        if (start > 0) {
+                          start--;
+                        } else {
+                          _timer.cancel();
+                        }
+                      });
+                    });
+                  });
                   Navigator.of(context).pop(context);
                 },
                 child: Text(
@@ -156,8 +181,7 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _questionIndex++;
     });
-    start = 30;
-    initState();
+
     // _totalScore += score;
   }
 
