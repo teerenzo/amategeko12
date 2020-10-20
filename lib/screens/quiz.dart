@@ -102,6 +102,7 @@ class _QuizScreenState extends State<QuizScreen> {
           start--;
         } else {
           _timer.cancel();
+          _answerQuestion("2", "4");
         }
       });
     });
@@ -109,7 +110,6 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   void _answerQuestion(String apl, String right) {
-    _answerQuestion("2", "4");
     _timer.cancel();
 
     if (apl == right) {
@@ -148,7 +148,7 @@ class _QuizScreenState extends State<QuizScreen> {
           );
         },
       );
-    } else if (apl == 2 && right == 4) {
+    } else if (apl == "2" && right == "4") {
       showDialog(
         context: context,
         builder: (context) {
