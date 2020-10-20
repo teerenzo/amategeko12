@@ -5,12 +5,13 @@ import 'package:amategeko_yumuhanda/screens/TrafficLights.dart';
 import 'package:amategeko_yumuhanda/screens/carSigns.dart';
 import 'package:amategeko_yumuhanda/screens/lessons.dart';
 import 'package:amategeko_yumuhanda/screens/quiz.dart';
+import 'package:amategeko_yumuhanda/screens/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: MyHome(),
+    home: SplashScreen(),
   ));
 }
 
@@ -27,7 +28,7 @@ class _MyHomeState extends State<MyHome> {
         elevation: 0.0,
         title: Text(
           "Kora Rimwe Utsinde",
-          style: TextStyle(fontSize: 17.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 23.0, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -116,9 +117,9 @@ class _MyHomeState extends State<MyHome> {
                             width: 100,
                           ),
                           Text(
-                            "Tangira wige",
+                            "Amasomo ya Audio",
                             style: TextStyle(
-                                fontSize: 16.0,
+                                fontSize: 17.0,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -220,7 +221,7 @@ class _MyHomeState extends State<MyHome> {
                           width: 100,
                         ),
                         Text(
-                          "Soma Ibibazo",
+                          "Ibibazo + Ibisubizo",
                           style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.blue,
@@ -266,23 +267,78 @@ class _MyHomeState extends State<MyHome> {
               ),
             ),
 
-            Card(
-              child: ListTile(
-                title: Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset(
-                        "images/share.png",
-                        width: 80,
-                      ),
-                      Text("Sangiza Abandi",
-                          style: TextStyle(
-                              fontSize: 16.0,
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w700))
-                    ],
+            InkWell(
+              onTap: () {
+                showDialog(
+                    barrierDismissible: false,
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: ListTile(
+                          title: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text(
+                              "Shyiramo numero yawe:",
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 20.0),
+                            ),
+                          ),
+                          subtitle: TextField(
+                            decoration: InputDecoration(
+                                hintStyle: TextStyle(
+                                    color: Colors.blueAccent, fontSize: 16.0),
+                                hintText: "eg: 0780640237",
+                                border: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.blueAccent, width: 2.0))),
+                          ),
+                        ),
+                        actions: <Widget>[
+                          RaisedButton(
+                            color: Colors.blueAccent,
+                            onPressed: () {
+                              //Navigator.of(context).pop();
+                            },
+                            child: Text("Kanda Ugure"),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          RaisedButton(
+                            color: Colors.red,
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              "x",
+                              style: TextStyle(fontSize: 22),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                        ],
+                      );
+                    });
+              },
+              child: Card(
+                child: ListTile(
+                  title: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          "images/share.png",
+                          width: 80,
+                        ),
+                        Text("Gura App",
+                            style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.w700))
+                      ],
+                    ),
                   ),
                 ),
               ),

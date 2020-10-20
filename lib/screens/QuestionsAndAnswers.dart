@@ -101,7 +101,9 @@ class Questions_and_answers extends StatelessWidget {
                             .map((answer) {
                           return Text(
                             answer['text'],
-                            style: TextStyle(fontSize: 17),
+                            style: TextStyle(
+                              fontSize: 17,
+                            ),
                           );
                         }).toList(),
                         Divider(
