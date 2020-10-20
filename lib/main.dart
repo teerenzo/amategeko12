@@ -29,7 +29,8 @@ class _MyHomeState extends State<MyHome> {
         elevation: 0.0,
         title: Text(
           "Kora Rimwe Utsinde",
-          style: TextStyle(fontSize: 23.0, fontWeight: FontWeight.bold),
+          style:
+              TextStyle(fontSize: size.width / 18, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(

@@ -26,6 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         backgroundColor: Colors.blue,
         body: Container(
@@ -35,15 +36,15 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Image.asset(
                   "images/stop.jpg",
-                  width: 200,
+                  width: size.width / 2,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: size.height / 20,
                 ),
                 Text(
                   "KORA RIMWE GUSA!!",
                   style: TextStyle(
-                      fontSize: 40,
+                      fontSize: size.width / 12,
                       color: Colors.yellow,
                       fontWeight: FontWeight.w700),
                 )
