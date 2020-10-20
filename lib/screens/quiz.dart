@@ -112,6 +112,7 @@ class _QuizScreenState extends State<QuizScreen> {
     if (apl == right) {
       _totalScore += 1;
       showDialog(
+        barrierDismissible: false,
         context: context,
         builder: (context) {
           return AlertDialog(
@@ -149,6 +150,7 @@ class _QuizScreenState extends State<QuizScreen> {
       );
     } else if (apl == '2' && right == '4') {
       showDialog(
+        barrierDismissible: false,
         context: context,
         builder: (context) {
           return AlertDialog(
@@ -186,6 +188,7 @@ class _QuizScreenState extends State<QuizScreen> {
       );
     } else {
       showDialog(
+        barrierDismissible: false,
         context: context,
         builder: (context) {
           return AlertDialog(
