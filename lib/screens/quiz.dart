@@ -85,9 +85,9 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void resetQuiz() {
     setState(() {
-      start = 5;
       _questionIndex = 0;
       _totalScore = 0;
+      start = 5;
     });
   }
 // var timer = Timer(Duration(seconds: 1), () {});
@@ -129,7 +129,9 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          _answerQuestion("2", "4");
+                          if (_questions.length > _questionIndex) {
+                            _answerQuestion("2", "4");
+                          }
                           _timer.cancel();
                         }
                       });
@@ -153,7 +155,7 @@ class _QuizScreenState extends State<QuizScreen> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            content: Text('Correct'),
+            content: Text('Time out'),
             actions: [
               MaterialButton(
                 onPressed: () {
@@ -164,7 +166,9 @@ class _QuizScreenState extends State<QuizScreen> {
                         if (start > 0) {
                           start--;
                         } else {
-                          _answerQuestion("2", "3");
+                          if (_questions.length > _questionIndex) {
+                            _answerQuestion("2", "4");
+                          }
                           _timer.cancel();
                         }
                       });
@@ -200,7 +204,9 @@ class _QuizScreenState extends State<QuizScreen> {
                           start--;
                         } else {
                           _timer.cancel();
-                          _answerQuestion("2", "4");
+                          if (_questions.length > _questionIndex) {
+                            _answerQuestion("2", "4");
+                          }
                         }
                       });
                     });
