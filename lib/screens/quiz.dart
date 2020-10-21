@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:amategeko_yumuhanda/components/quiz.dart';
 import 'package:amategeko_yumuhanda/components/result.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class QuizScreen extends StatefulWidget {
   @override
@@ -269,6 +270,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: fromCSSColor('#0f1a2f'),
         title: Text("Quiz"),
       ),
       body: _questionIndex < _questions.length

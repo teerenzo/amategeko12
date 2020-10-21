@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class Trafficlight_screen extends StatelessWidget {
   var lights = [
@@ -35,6 +36,7 @@ class Trafficlight_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: fromCSSColor('#0f1a2f'),
         title: Text(
           "Amatara yo mu muhanda",
         ),

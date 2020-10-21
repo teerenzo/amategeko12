@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class Questions_and_answers extends StatelessWidget {
   final _questions = const [
@@ -73,6 +74,7 @@ class Questions_and_answers extends StatelessWidget {
     // QuizScreen quizScreen = QuizScreen();
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: fromCSSColor('#0f1a2f'),
           title: Text("Questions and answers"),
         ),
         body: Padding(

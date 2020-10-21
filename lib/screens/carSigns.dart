@@ -1,5 +1,6 @@
 import 'package:amategeko_yumuhanda/screens/singleSign.dart';
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class CarSigns extends StatefulWidget {
   @override
@@ -98,6 +99,7 @@ class _CarSignsState extends State<CarSigns> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: fromCSSColor('#0f1a2f'),
         title: Text("car signs"),
       ),
       body: GridView.builder(

@@ -1,6 +1,7 @@
 import 'package:amategeko_yumuhanda/main.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: fromCSSColor('#1c2834'),
         body: Container(
           child: Center(
             child: Column(
@@ -44,9 +45,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 Text(
                   "KORA RIMWE GUSA!!",
                   style: TextStyle(
-                      fontSize: size.width / 19,
-                      color: Colors.yellow,
-                      fontWeight: FontWeight.w700),
+                    fontSize: size.width / 19,
+                    color: Colors.white,
+                  ),
                 )
               ],
             ),
