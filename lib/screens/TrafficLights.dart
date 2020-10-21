@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class Trafficlight_screen extends StatelessWidget {
   var lights = [
     {
-      'image': 'images/traffic_light.jpg',
+      'image': 'images/traffic_light.png',
       'name': 'stop',
       'description': 'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
     },
     {
-      'image': 'images/traffic_light.jpg',
+      'image': 'images/traffic_light.png',
       'name': 'stop',
       'description': 'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
     },
     {
-      'image': 'images/traffic_light.jpg',
+      'image': 'images/traffic_light.png',
       'name': 'stop',
       'description': 'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
           'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
@@ -21,7 +21,7 @@ class Trafficlight_screen extends StatelessWidget {
           'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
     },
     {
-      'image': 'images/traffic_light.jpg',
+      'image': 'images/traffic_light.png',
       'name': 'stop',
       'description': 'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
           'icyapa kiranga ko utwaye ikinyabiziga agomba guhagarara'
@@ -37,7 +37,6 @@ class Trafficlight_screen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Amatara yo mu muhanda",
-          style: TextStyle(fontSize: size.width / 20),
         ),
       ),
       body: Padding(
@@ -71,9 +70,9 @@ class Trafficlight_screen extends StatelessWidget {
                       Text(
                         lights[index]['description'],
                         style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            color: Colors.lightBlue,
-                            fontSize: size.width / 24),
+                            // fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                            fontSize: size.width / 30),
                       )
                     ],
                   ),

@@ -26,11 +26,11 @@ class _MyHomeState extends State<MyHome> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
         elevation: 0.0,
         title: Text(
           "Kora Rimwe Utsinde",
-          style:
-              TextStyle(fontSize: size.width / 18, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -116,12 +116,12 @@ class _MyHomeState extends State<MyHome> {
                         children: [
                           Image.asset(
                             "images/study.png",
-                            width: size.width * 2,
+                            width: size.width / 5,
                           ),
                           Text(
                             "Amasomo ya Audio",
                             style: TextStyle(
-                                fontSize: size.width / 24,
+                                fontSize: size.width / 28,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -151,14 +151,14 @@ class _MyHomeState extends State<MyHome> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Image.asset(
-                            "images/traffic_light.jpg",
-                            width: size.width / 4,
+                            "images/traffic_light.png",
+                            width: size.width / 5,
                             fit: BoxFit.cover,
                           ),
                           Text(
                             "Amatara Yo mu muhanda",
                             style: TextStyle(
-                                fontSize: size.width / 24,
+                                fontSize: size.width / 28,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -188,13 +188,13 @@ class _MyHomeState extends State<MyHome> {
                         children: [
                           Image.asset(
                             "images/carSign.png",
-                            width: size.width / 3,
+                            width: size.width / 5,
                             // height: size.height,
                           ),
                           Text(
                             "Ibimenyetso by' imodoka",
                             style: TextStyle(
-                                fontSize: size.width / 24,
+                                fontSize: size.width / 28,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700),
                           ),
@@ -221,13 +221,13 @@ class _MyHomeState extends State<MyHome> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          "images/questions.jpg",
-                          width: size.width / 3,
+                          "images/questions.png",
+                          width: size.width / 5,
                         ),
                         Text(
                           "Ibibazo + Ibisubizo",
                           style: TextStyle(
-                              fontSize: size.width / 24,
+                              fontSize: size.width / 28,
                               color: Colors.blue,
                               fontWeight: FontWeight.w700),
                         ),
@@ -255,12 +255,12 @@ class _MyHomeState extends State<MyHome> {
                       children: [
                         Image.asset(
                           "images/quiz_logo.png",
-                          width: size.width / 3,
+                          width: size.width / 5,
                         ),
                         Text(
                           "Imenyereze",
                           style: TextStyle(
-                              fontSize: size.width / 24,
+                              fontSize: size.width / 28,
                               color: Colors.blue,
                               fontWeight: FontWeight.w700),
                         ),
@@ -334,11 +334,11 @@ class _MyHomeState extends State<MyHome> {
                       children: [
                         Image.asset(
                           "images/buy.png",
-                          width: size.width / 3,
+                          width: size.width / 5,
                         ),
                         Text("Gura App",
                             style: TextStyle(
-                                fontSize: size.width / 24,
+                                fontSize: size.width / 28,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w700))
                       ],
@@ -349,7 +349,7 @@ class _MyHomeState extends State<MyHome> {
             ),
           ],
           gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         ),
       ),
     );

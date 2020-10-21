@@ -128,6 +128,7 @@ class _QuizScreenState extends State<QuizScreen> {
             content: Text('Correct'),
             actions: [
               MaterialButton(
+                color: Colors.green,
                 onPressed: () {
                   setState(() {
                     start = 60;
@@ -146,12 +147,19 @@ class _QuizScreenState extends State<QuizScreen> {
                   });
                   Navigator.of(context).pop(context);
                 },
-                child: Text(
-                  'Next',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
-                ),
+                child: _questions.length > _questionIndex
+                    ? Text(
+                        'Next',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
+                    : Text(
+                        'Done',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
               ),
             ],
           );
@@ -166,6 +174,7 @@ class _QuizScreenState extends State<QuizScreen> {
             content: Text('Time out'),
             actions: [
               MaterialButton(
+                color: Colors.red,
                 onPressed: () {
                   setState(() {
                     start = 60;
@@ -184,12 +193,19 @@ class _QuizScreenState extends State<QuizScreen> {
                   });
                   Navigator.of(context).pop(context);
                 },
-                child: Text(
-                  'Next',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
-                ),
+                child: _questions.length > _questionIndex
+                    ? Text(
+                        'Next',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
+                    : Text(
+                        'Done',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
               ),
             ],
           );
@@ -204,6 +220,7 @@ class _QuizScreenState extends State<QuizScreen> {
             content: Text("Worng, right answer was: $right"),
             actions: [
               MaterialButton(
+                color: Colors.yellowAccent,
                 onPressed: () {
                   setState(() {
                     start = 60;
@@ -222,12 +239,19 @@ class _QuizScreenState extends State<QuizScreen> {
                   });
                   Navigator.of(context).pop(context);
                 },
-                child: Text(
-                  'Next',
-                  style: TextStyle(
-                    color: Colors.blue,
-                  ),
-                ),
+                child: _questions.length > _questionIndex
+                    ? Text(
+                        'Next',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      )
+                    : Text(
+                        'Done',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
               ),
             ],
           );
