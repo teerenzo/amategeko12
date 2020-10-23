@@ -43,11 +43,11 @@ class SingleSign extends StatelessWidget {
                     children: [
                       Divider(color: Colors.blue),
                       Text(
-                        "$signDetailts",
+                        "Gisobanura: $signDetailts",
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16.0,
-                        ),
+                            color: Colors.black,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),

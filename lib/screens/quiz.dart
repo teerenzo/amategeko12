@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:amategeko_yumuhanda/components/quiz.dart';
 import 'package:amategeko_yumuhanda/components/result.dart';
