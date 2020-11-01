@@ -46,7 +46,7 @@ class SingleSign extends StatelessWidget {
                         "Gisobanura: $signDetailts",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 18.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.w700),
                       ),
                     ],

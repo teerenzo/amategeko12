@@ -40,15 +40,12 @@ class _CarSignsState extends State<CarSigns> {
       'picture': 'images/icyapa6.jpg',
       'detailts': 'Ntihanyurwa mu byerekezo byombi'
     },
-    {
-      'name': '',
-      'picture': 'images/icyapa7.jpg',
-      'detailts': 'Ntihanyurwa'
-    },
+    {'name': '', 'picture': 'images/icyapa7.jpg', 'detailts': 'Ntihanyurwa'},
     {
       'name': '',
       'picture': 'images/icyapa8.png',
-      'detailts': 'Ntihanyurwa n’ikinyabiziga icyo aricy cyose gifite moteri keretse amapikipiki adafite akanyamitende ko ku ruhande kimwe na za velomoteri'
+      'detailts':
+          'Ntihanyurwa n’ikinyabiziga icyo aricy cyose gifite moteri keretse amapikipiki adafite akanyamitende ko ku ruhande kimwe na za velomoteri'
     },
     {
       'name': '',
@@ -58,7 +55,8 @@ class _CarSignsState extends State<CarSigns> {
     {
       'name': '',
       'picture': 'images/icyapa10.png',
-      'detailts': 'Birabujijwe kunyura ku binyabiziga byose uretse ibinyamitende ibiri n’amapikipiki adafite akanyabiziga ko ku ruhande'
+      'detailts':
+          'Birabujijwe kunyura ku binyabiziga byose uretse ibinyamitende ibiri n’amapikipiki adafite akanyabiziga ko ku ruhande'
     },
     {
       'name': '',
@@ -72,14 +70,13 @@ class _CarSignsState extends State<CarSigns> {
     },
     {
       'name': '',
-      'picture': 'images/icyapa13.jpg',
+      'picture': 'images/icyapa13.png',
       'detailts': 'Icyerekezo gitegetswe'
     },
-
-
   ];
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: fromCSSColor('#0f1a2f'),
@@ -88,13 +85,12 @@ class _CarSignsState extends State<CarSigns> {
       body: GridView.builder(
         itemCount: signs.length,
         gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) =>
-                      SingleSign(
+                  builder: (context) => SingleSign(
                         signDetailts: signs[index]['detailts'],
                         signName: signs[index]['name'],
                         signPicture: signs[index]['picture'],
@@ -106,18 +102,7 @@ class _CarSignsState extends State<CarSigns> {
                 child: GridTile(
                   child: Image.asset(
                     signs[index]['picture'],
-                    height: 90.0,
-                  ),
-                  footer: Container(
-                    color: Colors.white70,
-                    child: Text(
-                      signs[index]['name'],
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 21.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    width: size.width / 9,
                   ),
                 ),
               ),

@@ -19,6 +19,20 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
+    String counterF() {
+      var output;
+      if (widget.counter == 120) {
+        output = '2:00';
+      } else if (widget.counter < 120 && widget.counter > 60) {
+        output = '1:${widget.counter - 60}';
+      } else if (widget.counter == 60) {
+        output = '1:00';
+      } else {
+        output = '0:${widget.counter}';
+      }
+      return output;
+    }
+
     return ListView(
       shrinkWrap: true,
       children: [
@@ -35,17 +49,18 @@ class _QuizState extends State<Quiz> {
                 ),
               ),
               Text(
-                widget.counter.toString(),
+                counterF(),
                 style: TextStyle(
-                    color: widget.counter > 10 ? Colors.black : Colors.red,
+                    color: widget.counter > 30 ? Colors.black : Colors.red,
                     fontSize: 30.0,
                     fontWeight: FontWeight.w700),
               )
             ],
           ),
         ),
-        Questions(widget.questions[widget.questionIndex]['text']),
-        Padding(padding: const EdgeInsets.only(top: 150.0)),
+        Questions(widget.questions[widget.questionIndex]['text'],
+            widget.questions[widget.questionIndex]['isImage']),
+        Padding(padding: const EdgeInsets.only(top: 90.0)),
         Card(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 8.0),

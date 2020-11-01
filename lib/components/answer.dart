@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:from_css_color/from_css_color.dart';
 
 class Answer extends StatelessWidget {
   final Function selcetedHandler;
@@ -18,7 +19,7 @@ class Answer extends StatelessWidget {
         children: [
           Divider(),
           RaisedButton(
-            color: Colors.blue,
+            color: fromCSSColor('#0f1a2f'),
             child: ListTile(
               title: Text(
                 text,
