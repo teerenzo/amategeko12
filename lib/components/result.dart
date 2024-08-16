@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Result extends StatelessWidget {
   final int totalScore;
   final int questionsLength;
-  final Function resetQuiz;
+  final void Function() resetQuiz;
   Result(this.totalScore, this.resetQuiz, this.questionsLength);
 
   @override
@@ -19,7 +19,7 @@ class Result extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          FlatButton(
+          TextButton(
             child: Text(
               'Restart Quiz',
               style: TextStyle(color: Colors.blue, fontSize: 18),

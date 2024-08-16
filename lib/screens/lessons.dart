@@ -6,7 +6,7 @@ class Lessons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: fromCSSColor('#0f1a2f'),
+        backgroundColor: fromCssColor('#0f1a2f'),
         title: Text("Lessons"),
       ),
       body: Center(

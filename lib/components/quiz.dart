@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:amategeko_yumuhanda/components/questions.dart';
-import 'package:amategeko_yumuhanda/components/answer.dart';
+import 'package:amategeko/components/questions.dart';
+import 'package:amategeko/components/answer.dart';
 
 class Quiz extends StatefulWidget {
   final List<Map<String, Object>> questions;
@@ -58,7 +58,7 @@ class _QuizState extends State<Quiz> {
             ],
           ),
         ),
-        Questions(widget.questions[widget.questionIndex]['text'],
+        Questions(widget.questions[widget.questionIndex]['text'].toString(),
             widget.questions[widget.questionIndex]['isImage']),
         Padding(padding: const EdgeInsets.only(top: 90.0)),
         Card(
@@ -72,7 +72,7 @@ class _QuizState extends State<Quiz> {
                   return Answer(
                       () => widget.answerQuestion(answer['apl'],
                           widget.questions[widget.questionIndex]['right']),
-                      answer['text']);
+                      answer['text'].toString());
                 }).toList()
               ],
             ),

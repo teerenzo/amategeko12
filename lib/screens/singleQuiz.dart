@@ -1,11 +1,11 @@
 import 'dart:async';
-import 'package:amategeko_yumuhanda/module/quiz1.dart';
-import 'package:amategeko_yumuhanda/module/quiz2.dart';
-import 'package:amategeko_yumuhanda/module/quiz3.dart';
-import 'package:amategeko_yumuhanda/module/quiz4.dart';
+import 'package:amategeko/module/quiz1.dart';
+import 'package:amategeko/module/quiz2.dart';
+import 'package:amategeko/module/quiz3.dart';
+import 'package:amategeko/module/quiz4.dart';
 import 'package:flutter/material.dart';
-import 'package:amategeko_yumuhanda/components/quiz.dart';
-import 'package:amategeko_yumuhanda/components/result.dart';
+import 'package:amategeko/components/quiz.dart';
+import 'package:amategeko/components/result.dart';
 import 'package:from_css_color/from_css_color.dart';
 
 class SingleQuiz extends StatefulWidget {
@@ -21,7 +21,7 @@ class _SingleQuizState extends State<SingleQuiz> {
 
   var _questionIndex = 0;
   var _totalScore = 0;
-  Timer _timer;
+  late Timer _timer;
   int start = 120;
   static const oneSecond = Duration(seconds: 1);
 
@@ -179,8 +179,8 @@ class _SingleQuizState extends State<SingleQuiz> {
                   SizedBox(height: 8),
                   Text((_questions[_questionIndex - 1]['answers']
                           as List<Map<String, Object>>)
-                      .singleWhere(
-                          (element) => element['apl'] == right)['text']),
+                      .singleWhere((element) => element['apl'] == right)['text']
+                      .toString()),
                 ],
               ),
             ),
@@ -235,7 +235,7 @@ class _SingleQuizState extends State<SingleQuiz> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: fromCSSColor('#0f1a2f'),
+        backgroundColor: fromCssColor('#0f1a2f'),
         title: Text(widget.title),
       ),
       body: _questionIndex < _questions.length

@@ -1,4 +1,4 @@
-import 'package:amategeko_yumuhanda/screens/singleQuiz.dart';
+import 'package:amategeko/screens/singleQuiz.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
@@ -19,7 +19,7 @@ class _QuizScreenState extends State<QuizScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: fromCSSColor('#0f1a2f'),
+          backgroundColor: fromCssColor('#0f1a2f'),
           title: Text("Quiz"),
         ),
         body: GridView.builder(
@@ -49,7 +49,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             quizList[index],
                             style: TextStyle(
                               fontSize: size.width / 28,
-                              color: fromCSSColor('#0f1a2f'),
+                              color: fromCssColor('#0f1a2f'),
                             ),
                           ),
                         ],

@@ -1,4 +1,4 @@
-import 'package:amategeko_yumuhanda/screens/singleSign.dart';
+import 'package:amategeko/screens/singleSign.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
@@ -79,7 +79,7 @@ class _CarSignsState extends State<CarSigns> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: fromCSSColor('#0f1a2f'),
+        backgroundColor: fromCssColor('#0f1a2f'),
         title: Text("car signs"),
       ),
       body: GridView.builder(
@@ -101,7 +101,7 @@ class _CarSignsState extends State<CarSigns> {
                 padding: const EdgeInsets.all(20.0),
                 child: GridTile(
                   child: Image.asset(
-                    signs[index]['picture'],
+                    signs[index]['picture'].toString(),
                     width: size.width / 9,
                   ),
                 ),

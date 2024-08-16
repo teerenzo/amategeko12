@@ -36,7 +36,7 @@ class Trafficlight_screen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: fromCSSColor('#0f1a2f'),
+        backgroundColor: fromCssColor('#0f1a2f'),
         title: Text(
           "Amatara yo mu muhanda",
         ),
@@ -56,11 +56,11 @@ class Trafficlight_screen extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  trailing: Image.asset(lights[index]['image'],
+                  trailing: Image.asset(lights[index]['image']!,
                       width: size.width / 7),
                   //leading: Image.asset(lights[index]['image'],width: size.width/5),
                   title: Text(
-                    lights[index]['name'],
+                    lights[index]['name']!,
                     style:
                         TextStyle(color: Colors.red, fontSize: size.width / 15),
                   ),
@@ -70,7 +70,7 @@ class Trafficlight_screen extends StatelessWidget {
                         height: size.height / 15,
                       ),
                       Text(
-                        lights[index]['description'],
+                        lights[index]['description']!,
                         style: TextStyle(
                             // fontWeight: FontWeight.w700,
                             color: Colors.black,

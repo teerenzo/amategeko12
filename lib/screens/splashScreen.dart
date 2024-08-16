@@ -1,4 +1,4 @@
-import 'package:amategeko_yumuhanda/main.dart';
+import 'package:amategeko/main.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: fromCSSColor('#1c2834'),
+        backgroundColor: fromCssColor('#1c2834'),
         body: Container(
           child: Center(
             child: Column(

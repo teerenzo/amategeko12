@@ -1,4 +1,4 @@
-import 'package:amategeko_yumuhanda/module/questionsAnswer.dart';
+import 'package:amategeko/module/questionsAnswer.dart';
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
@@ -12,7 +12,7 @@ class Questions_and_answers extends StatelessWidget {
     // QuizScreen quizScreen = QuizScreen();
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: fromCSSColor('#0f1a2f'),
+          backgroundColor: fromCssColor('#0f1a2f'),
           title: Text("Questions and answers"),
         ),
         body: Padding(
@@ -23,7 +23,7 @@ class Questions_and_answers extends StatelessWidget {
                 return ListTile(
                   contentPadding:
                       const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 10.0),
-                  title: _questions[index]['isImage']
+                  title: _questions[index]['isImage'] == true
                       ? Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -32,7 +32,7 @@ class Questions_and_answers extends StatelessWidget {
                               style: TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 19.0),
                             ),
-                            Image.asset(_questions[index]['text'])
+                            Image.asset(_questions[index]['text'].toString())
                           ],
                         )
                       : Text(
@@ -55,14 +55,14 @@ class Questions_and_answers extends StatelessWidget {
                               .map((answer) {
                             return (answer['apl'] == _questions[index]['right']
                                 ? Text(
-                                    answer['text'],
+                                    answer['text'].toString(),
                                     style: TextStyle(
                                         fontSize: 17,
                                         color: Colors.green,
                                         fontWeight: FontWeight.bold),
                                   )
                                 : Text(
-                                    answer['text'],
+                                    answer['text'].toString(),
                                     style: TextStyle(
                                         fontSize: 17, color: Colors.black),
                                   ));

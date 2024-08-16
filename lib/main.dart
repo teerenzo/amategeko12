@@ -1,11 +1,11 @@
-import 'dart:io';
 
-import 'package:amategeko_yumuhanda/screens/QuestionsAndAnswers.dart';
-import 'package:amategeko_yumuhanda/screens/TrafficLights.dart';
-import 'package:amategeko_yumuhanda/screens/carSigns.dart';
-import 'package:amategeko_yumuhanda/screens/lessons.dart';
-import 'package:amategeko_yumuhanda/screens/quiz.dart';
-import 'package:amategeko_yumuhanda/screens/splashScreen.dart';
+
+import 'package:amategeko/screens/QuestionsAndAnswers.dart';
+import 'package:amategeko/screens/TrafficLights.dart';
+import 'package:amategeko/screens/carSigns.dart';
+import 'package:amategeko/screens/lessons.dart';
+import 'package:amategeko/screens/quiz.dart';
+import 'package:amategeko/screens/splashScreen.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ class _MyHomeState extends State<MyHome> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: fromCSSColor('#0f1a2f'),
+        backgroundColor: fromCssColor('#0f1a2f'),
         elevation: 0.0,
         title: Text(
           "Kora Rimwe Utsinde",
@@ -51,7 +51,7 @@ class _MyHomeState extends State<MyHome> {
       bottomNavigationBar: Container(
         height: 60,
         child: BottomAppBar(
-          color: fromCSSColor('#0f1a2f'),
+          color: fromCssColor('#0f1a2f'),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +123,7 @@ class _MyHomeState extends State<MyHome> {
                             "Amasomo ya Audio",
                             style: TextStyle(
                               fontSize: size.width / 28,
-                              color: fromCSSColor('#1c2834'),
+                              color: fromCssColor('#1c2834'),
                             ),
                           ),
                         ],
@@ -160,7 +160,7 @@ class _MyHomeState extends State<MyHome> {
                             "Amatara Yo mu muhanda",
                             style: TextStyle(
                               fontSize: size.width / 28,
-                              color: fromCSSColor('#0f1a2f'),
+                              color: fromCssColor('#0f1a2f'),
                             ),
                           ),
                         ],
@@ -196,7 +196,7 @@ class _MyHomeState extends State<MyHome> {
                             "Ibimenyetso by' imodoka",
                             style: TextStyle(
                               fontSize: size.width / 28,
-                              color: fromCSSColor('#0f1a2f'),
+                              color: fromCssColor('#0f1a2f'),
                             ),
                           ),
                         ],
@@ -229,7 +229,7 @@ class _MyHomeState extends State<MyHome> {
                           "Ibibazo + Ibisubizo",
                           style: TextStyle(
                             fontSize: size.width / 28,
-                            color: fromCSSColor('#0f1a2f'),
+                            color: fromCssColor('#0f1a2f'),
                           ),
                         ),
                       ],
@@ -262,7 +262,7 @@ class _MyHomeState extends State<MyHome> {
                           "Imenyereze",
                           style: TextStyle(
                             fontSize: size.width / 28,
-                            color: fromCSSColor('#0f1a2f'),
+                            color: fromCssColor('#0f1a2f'),
                           ),
                         ),
                       ],
@@ -299,8 +299,8 @@ class _MyHomeState extends State<MyHome> {
                           ),
                         ),
                         actions: <Widget>[
-                          RaisedButton(
-                            color: Colors.blueAccent,
+                          TextButton(
+                            // color: Colors.blueAccent,
                             onPressed: () {
                               //Navigator.of(context).pop();
                             },
@@ -309,16 +309,13 @@ class _MyHomeState extends State<MyHome> {
                           SizedBox(
                             width: 10,
                           ),
-                          RaisedButton(
-                            color: Colors.red,
-                            onPressed: () {
+                          TextButton( onPressed: () {
                               Navigator.of(context).pop();
-                            },
-                            child: Text(
+                            }, child: Text(
                               "x",
                               style: TextStyle(fontSize: 22),
-                            ),
-                          ),
+                            ),)
+                       ,
                           SizedBox(
                             width: 20,
                           ),
@@ -340,7 +337,7 @@ class _MyHomeState extends State<MyHome> {
                         Text("Gura App",
                             style: TextStyle(
                               fontSize: size.width / 28,
-                              color: fromCSSColor('#0f1a2f'),
+                              color: fromCssColor('#0f1a2f'),
                             ))
                       ],
                     ),

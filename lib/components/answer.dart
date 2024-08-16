@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 
 class Answer extends StatelessWidget {
-  final Function selcetedHandler;
+  final void Function() selcetedHandler;
   final String text;
 
   Answer(
@@ -18,8 +18,8 @@ class Answer extends StatelessWidget {
       child: Column(
         children: [
           Divider(),
-          RaisedButton(
-            color: fromCSSColor('#0f1a2f'),
+          TextButton(
+            // color: fromCSSColor('#0f1a2f'),
             child: ListTile(
               title: Text(
                 text,
